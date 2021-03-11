@@ -1,0 +1,6 @@
+[submodule "riscv-soc-cores"]
+	path = riscv-soc-cores
+	url = https://github.com/open-design/riscv-soc-cores.git
+[submodule "fusesoc"]
+	path = fusesoc
+	url = https://github.com/olofk/fusesoc
