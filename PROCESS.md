@@ -3,10 +3,22 @@
 # attempt #2 - litex + vexriscv
 Following zephyr litex_vexriscv board docs @ https://docs.zephyrproject.org/latest/boards/riscv/litex_vexriscv/doc/index.html
 
+## setup
     wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14.tar.gz
+    tar -xf riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14.tar.gz
+    export PATH=$PATH:$PWD/riscv64-unknown-elf-gcc-8.1.0-2019.01.0-x86_64-linux-ubuntu14/bin/
+
+    wget https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py
+    chmod +x litex_setup.py
+    ./litex_setup.py init
+    sudo ./litex_setup.py install
+
+## Build
+    cd litex-wrkspc/litex-boards/litex_boards/targets
+    ./de10lite.py --cpu-type vexriscv --build
+
 
 # attempt #1 - fusesoc + picorv32
-
 Builds for de0 without issue but picorv32 lacks PLIC which is currently required for zephyr risc-v
 
 Background: https://github.com/micro-FPGA/riscv-contest-2018/issues/3
