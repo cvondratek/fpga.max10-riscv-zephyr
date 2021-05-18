@@ -4,3 +4,7 @@
 [submodule "fusesoc"]
 	path = fusesoc
 	url = https://github.com/olofk/fusesoc
+[submodule "litex-wrkspc/litex-boards"]
+	path = litex-wrkspc/litex-boards
+	url = git@github.com:cvondratek/litex-boards.git
+	branch = 10m08-evk
